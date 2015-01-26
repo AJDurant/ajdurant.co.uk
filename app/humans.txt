@@ -3,12 +3,18 @@
 
 # TEAM
 
-  <name> -- <role> -- <twitter>
+  Webmaster: Andy Durant
+  Site: ajdurant.co.uk
+  Twitter: @andydurant
+  Location: York, UK
 
 # THANKS
 
-  <name>
+  Web Fundamentals - https://github.com/google/web-starter-kit
 
 # TECHNOLOGY COLOPHON
 
-  HTML5, CSS3
+  Standards: HTML5, CSS3
+  Components: Web Fundamentals
+  Software:
+  IDE: Sublime Text 3, Chrome
