@@ -11,6 +11,10 @@
        url('../../../bower_components/material-design-icons/iconfont/MaterialIcons-Regular.ttf') format('truetype');
 }
 
+main {
+    flex-shrink: 0;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -54,7 +58,7 @@
 }
 
 /**
- *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+ *  Do not remove this comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
  */
 // injector
