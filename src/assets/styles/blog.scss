@@ -1,0 +1,21 @@
+.meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+}
+
+.meta > * {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-spacer {
+    flex-grow: 1;
+}
+
+.tag {
+    padding: 0 2px;
+}
