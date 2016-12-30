@@ -12,7 +12,7 @@ var $ = require('gulp-load-plugins')();
 var site  = require('../site.json');
 site.time = new Date();
 
-var rePostName   = /(\d{4})-(\d{1,2})-(\d{1,2})-(.*)/;
+var rePostName = /(\d{4})-(\d{1,2})-(\d{1,2})-(.*)/;
 
 swig.setDefaults({
     loader: swig.loaders.fs(conf.paths.src + '/templates'),
@@ -69,7 +69,7 @@ gulp.task('blog', ['posts'], function () {
         .pipe(gulp.dest(path.join(conf.paths.tmp, '/build')));
 });
 
-gulp.task('templates', ['pages', 'media', 'posts', 'tags', 'blog']);
+gulp.task('templates', ['pages', 'media', 'posts', 'tags', 'blog', 'images']);
 
 function collectPosts() {
     var posts = [];
