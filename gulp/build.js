@@ -9,12 +9,12 @@ var $ = require('gulp-load-plugins')({
 });
 
 gulp.task('html', ['inject'], function () {
-    var htmlFilter = $.filter('*.html', { restore: true });
+    var htmlFilter = $.filter('**/*.html', { restore: true });
     var jsFilter = $.filter('**/*.js', { restore: true });
     var cssFilter = $.filter('**/*.css', { restore: true });
 
     return gulp.src(path.join(conf.paths.tmp, '/serve/**/*.html'))
-    .pipe($.useref())
+    .pipe($.useref({ searchPath: ['.tmp/serve', './bower_components'] }))
     .pipe(jsFilter)
     .pipe($.sourcemaps.init())
     .pipe($.uglify({ preserveComments: $.uglifySaveLicense })).on('error', conf.errorHandler('Uglify'))
