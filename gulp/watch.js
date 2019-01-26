@@ -8,7 +8,7 @@ function isOnlyChange(event) {
     return event.type === 'changed';
 }
 
-gulp.task('watch', ['inject'], function () {
+gulp.task('watch', ['inject', 'images'], function () {
 
     gulp.watch([
         path.join(conf.paths.src, '/templates/*.html'),

@@ -14,14 +14,23 @@ gulp.task('html', ['inject'], function () {
     var cssFilter = $.filter('**/*.css', { restore: true });
 
     return gulp.src(path.join(conf.paths.tmp, '/serve/**/*.html'))
-    .pipe($.useref({ searchPath: ['.tmp/serve', './bower_components'] }))
+    .pipe($.debug({title: 'debug:'}))
+    .pipe($.useref({
+        searchPath: ['.tmp/serve', './bower_components'],
+        transformPath: function(filePath) {
+            return filePath.replace(/(\.\.\/)+bower_components\//,'');
+        }
+    }))
+    .pipe($.debug({title: 'useref:'}))
     .pipe(jsFilter)
+    .pipe($.debug({title: 'js-filter:'}))
     .pipe($.sourcemaps.init())
     .pipe($.uglify({ preserveComments: $.uglifySaveLicense })).on('error', conf.errorHandler('Uglify'))
     .pipe($.rev())
     .pipe($.sourcemaps.write('maps'))
     .pipe(jsFilter.restore)
     .pipe(cssFilter)
+    .pipe($.debug({title: 'css-filter:'}))
     .pipe($.sourcemaps.init())
     .pipe($.replace('../../../bower_components/material-design-icons/iconfont/', '/assets/fonts/'))
     .pipe($.cleanCss({ processImport: false }))
@@ -50,14 +59,14 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest(path.join(conf.paths.dist, 'assets/fonts/')));
 });
 
-gulp.task('other', function () {
+gulp.task('other', ['images'], function () {
     var fileFilter = $.filter(function (file) {
         return file.stat.isFile();
     });
 
     return gulp.src([
         path.join(conf.paths.tmp, '/serve/**/*'),
-        path.join('!' + conf.paths.src, '/**/*.{html,css,js,scss}')
+        path.join('!' + conf.paths.tmp, '/**/*.{html,css,js,scss}')
     ])
     .pipe(fileFilter)
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')));

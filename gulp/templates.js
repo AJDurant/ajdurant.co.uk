@@ -69,7 +69,7 @@ gulp.task('blog', ['posts'], function () {
         .pipe(gulp.dest(path.join(conf.paths.tmp, '/build')));
 });
 
-gulp.task('templates', ['pages', 'media', 'posts', 'tags', 'blog', 'images']);
+gulp.task('templates', ['pages', 'media', 'posts', 'tags', 'blog']);
 
 function collectPosts() {
     var posts = [];
