@@ -22,7 +22,7 @@ pygmentsCodeFences = true
     instagram = ""
 
 [params]
-    tagline = "Random notes and info"
+    tagline = "Random notes and things"
 
 [[menu.main]]
     name = "Home" #Name in the navigation bar
