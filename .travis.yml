@@ -1,9 +1,12 @@
+dist: xenial
+
 # Install the apt prerequisites
 addons:
   apt:
     packages:
       - python-pygments
       - hugo
+    update: true
 
 # Clean and don't fail
 install:
