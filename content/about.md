@@ -1,6 +1,9 @@
 ---
 title: Hello!
-nav: index
+date: 2019-01-26T14:37:19Z
+menu: main
+weight: 30
+meta: false
 ---
 
 Welcome, I'm Andy, a Software Engineer in York, I'm a Christian, and I'm interested in embedded systems and web development.

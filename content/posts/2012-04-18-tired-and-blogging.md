@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tired and blogging
+date: 2012-04-18
 tags:
     - blog
     - sleep

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Y u no blog post?
+date: 2012-04-29
 tags:
     - blog
 ---

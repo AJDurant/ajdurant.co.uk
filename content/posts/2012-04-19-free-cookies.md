@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Free cookies for everyone!
+date: 2012-04-19
 tags:
     - ico
     - cookies

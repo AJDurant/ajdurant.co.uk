@@ -1,6 +1,7 @@
 ---
 layout: post
 title: It's Summer! (though it may not feel like it)
+date: 2012-07-15
 tags:
     - blog
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A short time spent with multiviews
+date: 2012-07-19
 tags:
     - apache
     - multiviews

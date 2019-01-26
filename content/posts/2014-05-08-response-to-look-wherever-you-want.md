@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Response to 'Look Wherever You Want'
+date: 2014-05-08
 tags:
     - technology
     - media

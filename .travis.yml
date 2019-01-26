@@ -1,8 +1,14 @@
-language: node_js
-node_js:
-  - 'node'
-before_install:
-  - 'npm install -g bower'
-  - 'npm install -g gulp'
-before_script:
-  - 'bower install'
+# Install the apt prerequisites
+addons:
+  apt:
+    packages:
+      - python-pygments
+      - hugo
+
+# Clean and don't fail
+install:
+  - rm -rf public || exit 0
+
+# Build the website
+script:
+  - hugo -v

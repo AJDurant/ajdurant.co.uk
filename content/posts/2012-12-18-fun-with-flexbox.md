@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fun with Flexbox
+date: 2012-12-18
 tags:
     - css
     - flexbox

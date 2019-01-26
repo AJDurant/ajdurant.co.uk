@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tablets and why I don't like the iPad
+date: 2013-02-12
 tags:
     - tablet
     - ipad

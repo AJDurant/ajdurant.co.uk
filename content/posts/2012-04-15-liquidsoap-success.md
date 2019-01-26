@@ -1,6 +1,7 @@
 ---
 layout: post
 title: LiquidSoap Success!
+date: 2012-04-15
 tags:
     - liquidsoap
     - ury
