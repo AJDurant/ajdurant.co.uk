@@ -2,7 +2,7 @@ baseURL = "https://ajdurant.co.uk/"
 languageCode = "en-gb"
 title = "ajdurant - Andy Durant"
 
-copyright = "Copyright &copy; 2019 - AJ Durant"
+copyright = "Copyright &copy; 2020 - AJ Durant"
 canonifyurls = true
 theme = "kiera"
 
@@ -15,7 +15,7 @@ pygmentsCodeFences = true
 [author]
     name = "Andrew Durant"
     github = "AJDurant"
-    gitlab = ""
+    gitlab = "AJDurant"
     linkedin = "andydurant"
     facebook = ""
     twitter = "andydurant"
