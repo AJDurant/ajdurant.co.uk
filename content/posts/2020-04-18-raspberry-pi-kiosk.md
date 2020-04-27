@@ -9,10 +9,10 @@ tags:
 ---
 A while back I put together a dashboard display screen using a Raspberry Pi, recently I was doing it again and had to dig through to work out what I had done before. So now I have notes on going from scratch to having a working kiosk display with a Pi.
 
-##First boot
+## First boot
 You can configure a Pi to work headlessly, in this case without a keyboard and mouse, by putting your `wpa_supplicant.conf` and a file named `ssh` in the FAT32 boot partition on the SD card after imaging it. This will enable the Pi to connect to WiFi and be accessible by SSH without having to hook anything up to the Pi.
 
-##WiFi
+## WiFi
 Not required if using Ethernet. This is all that is needed to configure WiFi, all network interfaces default to DHCP.
 
 /etc/wpa_supplicant/wpa_supplicant.conf:
@@ -27,10 +27,10 @@ network={
 }
 ```
 
-##Change the default password
+## Change the default password
 `passwd`
 
-##packages
+## packages
 Install minimal X packages, window manager, and browser.
 ```
 apt-get update
@@ -39,7 +39,7 @@ apt-get install xserver-xorg xserver-xorg-legacy xinit x11-xserver-utils chromiu
 Modify /etc/X11/Xwrapper.config to have allowed_users=anybody to enable running X.
 ```
 
-##Power saving
+## Power saving
 These scripts/crons will turn the display on/off to save some energy.
 
 `sudo crontab -e`
@@ -66,7 +66,7 @@ tvservice -o
 chmod +x /usr/local/bin/screenon /usr/local/bin/screenoff
 ```
 
-##Boot to browser
+## Boot to browser
 We use matchbox as a very lightweight window manager. Running `startx` as `pi` from `rc.local` runs the .xinitrc script which launches matchbox and chromium. The Pi should be configured to not load the desktop as we manage this ourselves.
 
 /home/pi/.xinitrc:
@@ -130,5 +130,5 @@ chromium-browser \
 su - pi -c 'startx' &
 ```
 
-##Conclusion
+## Conclusion
 With all that installed and configured, you now have a Pi that will boot up and load your webpage without any input. There is no particular effort here to ensure a secure system, as I was using these on closed networks, so you should do your own hardening as appropriate.
