@@ -2,18 +2,34 @@ dist: bionic
 sudo: required
 language: minimal
 
-# Install current Hugo, clean and don't fail
 install:
-  - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb
-  - sudo dpkg -i hugo*.deb
-  - rm -rf public || exit 0
+- wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb
+- sudo dpkg -i hugo*.deb
+- rm -rf public || exit 0
 
-# Build the website
 script:
-  - hugo version
-  - hugo -v
+- hugo version
+- hugo -v
+
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_db2095f63ba3_key -iv $encrypted_db2095f63ba3_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
+- echo -e "Host ${DEPLOY_HOST}\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --quiet --delete ${TRAVIS_BUILD_DIR}/public/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIRECTORY}
+  on:
+    branch: master
 
 env:
   global:
-    - PRODUCTION=true
-    - HUGO_RELEASE=0.69.2
+  - PRODUCTION=true
+  - HUGO_RELEASE=0.69.2
+  - secure: M66od3/ntQKXT6/svFYSwolzuPKS4/1bNRR4t3b9bSr+4MG1va9LClkJy3fHKA8dIH8g/YY38t9uchvkm+VbsDEvDmtegiNqmbdyV71CB9GQbI1V56QtBsE3f7U7i6mhPeUzpEAx0ffOrxQSPjf42fUIcG2Pe+1cXLdeWX57DJQ=
+  - secure: Kh9qacSsF2igAOw8pAhoZIBsvDNIKlsdB/py4xpT+OzKBPkiUcy66PKngtJGdxnYUmd0qm+aPbvDAh9bkg+VzW47OKsdGPWGKrLhOwCHe+dYZlxKqXJd3RFDfprF/cIZjumfg4B8WK1ny9+w5t7QmHqf4Z9RNLLLtq0eFl1gRDg=
+  - secure: MMNJfu78gnwYEDK94vq59iCK63PfdrHgO87zsTeIUSr20tnAFtSIwznSaltP7HBIDQGni7oMqLv4u+vogByej3zFe/CnCYBDVblyzLfqkIZlBuuZkEVd1PeKgiFs5CMv2Xr2jVhv2p2u4A0J5FVFw6ih9gNQVw9r/L1LLjI1VJo=
