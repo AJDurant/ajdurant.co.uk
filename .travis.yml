@@ -1,4 +1,5 @@
-dist: xenial
+dist: bionic
+language: minimal
 
 # Install the apt prerequisites
 addons:
