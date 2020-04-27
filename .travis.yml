@@ -1,18 +1,19 @@
 dist: bionic
+sudo: required
 language: minimal
 
-# Install the apt prerequisites
-addons:
-  apt:
-    packages:
-      - python-pygments
-      - hugo
-    update: true
-
-# Clean and don't fail
+# Install current Hugo, clean and don't fail
 install:
+  - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb
+  - sudo dpkg -i hugo*.deb
   - rm -rf public || exit 0
 
 # Build the website
 script:
+  - hugo version
   - hugo -v
+
+env:
+  global:
+    - PRODUCTION=true
+    - HUGO_RELEASE=0.69.2
