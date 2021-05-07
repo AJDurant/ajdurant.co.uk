@@ -2,7 +2,7 @@ baseURL = "https://ajdurant.co.uk/"
 languageCode = "en-gb"
 title = "ajdurant - Andy Durant"
 
-copyright = "Copyright &copy; 2020 - AJ Durant"
+copyright = "Copyright &copy; 2021 - AJ Durant"
 canonifyurls = true
 theme = "kiera"
 
