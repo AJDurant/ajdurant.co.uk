@@ -5,6 +5,8 @@ date: 2019-01-26
 tags:
     - blog
     - website
+aliases:
+    - /posts/2019-01-26-static-site-generation-with-hugo
 ---
 In December 2016 I started re-writing my website to be generated as a static site. I wanted to make the blog the same as the rest of the site, and move it off Tumblr, as it had been using the same theme as my original website.
 

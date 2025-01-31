@@ -5,6 +5,8 @@ date: 2012-04-10
 tags:
     - blog
     - website
+aliases:
+    - /posts/2012-04-10-blog-built
 ---
 So, after messing around with iptables this afternoon on my server I thought I should write a blog post about it (more on that soon). However this required me to actually have a blog to post in!
 

@@ -6,6 +6,8 @@ tags:
     - raspberry pi
     - kiosk
     - server
+aliases:
+    - /posts/2020-04-18-raspberry-pi-kiosk
 ---
 A while back I put together a dashboard display screen using a Raspberry Pi, recently I was doing it again and had to dig through to work out what I had done before. So now I have notes on going from scratch to having a working kiosk display with a Pi.
 

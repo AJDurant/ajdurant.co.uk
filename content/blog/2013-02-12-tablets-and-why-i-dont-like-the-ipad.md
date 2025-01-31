@@ -5,6 +5,8 @@ date: 2013-02-12
 tags:
     - tablet
     - ipad
+aliases:
+    - /posts/2013-02-12-tablets-and-why-i-dont-like-the-ipad
 ---
 
 Having used an iPad for the last week whilst working on URY's Radioplayer Webview, as part of a hack-week (more on that soon I hope) I  have come to the informed conclusion that I don't like it.

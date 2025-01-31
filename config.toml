@@ -1,34 +1,62 @@
+# Basic config
 baseURL = "https://ajdurant.co.uk/"
+theme = "hugo-simple"
 languageCode = "en-gb"
-title = "ajdurant - Andy Durant"
+title = "Andy Durant"
+copyright = "© AJ Durant"
 
-copyright = "Copyright &copy; 2021 - AJ Durant"
+# https://github.com/gohugoio/hugo/issues/12152
+capitalizeListTitles = false
+
 canonifyurls = true
-theme = "kiera"
-
-paginate = 10
 
 summaryLength = 30
 enableEmoji = true
 pygmentsCodeFences = true
+googleAnalytics = ""
 
-[author]
-    name = "Andrew Durant"
-    github = "AJDurant"
-    gitlab = "AJDurant"
-    linkedin = "andydurant"
-    facebook = ""
-    twitter = "andydurant"
-    instagram = ""
+# Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
+disableKinds = ["taxonomy"]
+# ignoreErrors = ["error-disable-taxonomy"]
+[taxonomies]
+tag = "tags"
+
+[permalinks]
+blog = "/:slugorfilename/"
+tags = "/blog/:slug"
+
+[markup.goldmark.renderer]
+unsafe = true
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+[markup.highlight]
+lineNos = true
+lineNumbersInTable = false
+noClasses = true
+style = "catppuccin-mocha"
 
 [params]
-    tagline = "Random notes and things"
+title = "Andy Durant"
+description = "Random notes and things"
+dateFormat = "2006-01-02"
+hideMadeWithLine = true
+hideRSSLink = false
 
-[[menu.main]]
-    name = "Home" #Name in the navigation bar
-    weight = 10 #The larger the weight, the more on the right this item will be
-    url = "/" #URL address
-[[menu.main]]
-    name = "Posts"
-    weight = 20
-    url = "/posts/"
+[params.author]
+name = "Andrew Durant"
+github = "AJDurant"
+gitlab = "AJDurant"
+linkedin = "andydurant"
+
+[[menus.main]]
+name = "Hello!" #Name in the navigation bar
+pageRef = "/"
+weight = 10
+[[menus.main]]
+name = "Blog"
+pageRef = "/blog"
+weight = 20
+
+[pagination]
+pagerSize = 16

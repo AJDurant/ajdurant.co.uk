@@ -8,6 +8,8 @@ tags:
     - mod_rewrite
     - website
     - server
+aliases:
+    - /posts/2012-07-19-a-short-time-spent-with-multiviews
 ---
 
 I've recently been building a new website, well newish. It's a re-design and replacement for a website written a couple of years back and made in the CMS Drupal. I also recently read (albeit rather old) an article on [URIs not changing](http://www.w3.org/Provider/Style/URI "Cool URIs don't change"). Now this prompted various thoughts into my head, some of which I had had whist designing this other website. Such as why do I have to have .html on all my URIs? The old site most of the content was coming from didn't (I know this is down to mod_rewrite for fancy SEO urls by Drupal, but all the same).

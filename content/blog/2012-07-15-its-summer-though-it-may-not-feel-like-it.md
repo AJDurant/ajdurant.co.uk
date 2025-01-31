@@ -4,6 +4,8 @@ title: It's Summer! (though it may not feel like it)
 date: 2012-07-15
 tags:
     - blog
+aliases:
+    - /posts/2012-07-15-its-summer-though-it-may-not-feel-like-it
 ---
 
 So it's now the summer holidays for me (3 months from The University of York, thanks =P), well it has been for a couple of weeks. A lot has happened this term, exams, finishing project work, finishing the year, exploring the campus, discovering URY history, hanging out with friends, going to Whitby, and all sorts of things that I can't remember due to the busyness. It has been busy, but it's been great fun. Even with the pressure of exams, which never bother me too much however I'm glad to say I passed the year fairly well and shall be continuing onwards on my journey of becoming an Engineer in Computing.

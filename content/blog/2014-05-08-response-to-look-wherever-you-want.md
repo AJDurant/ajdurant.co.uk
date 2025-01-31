@@ -8,6 +8,8 @@ tags:
     - social media
     - media ecology
     - worldview
+aliases:
+    - /posts/2014-05-08-response-to-look-wherever-you-want
 ---
 
 This blog post is a response to [Elisabeth Shuker's blog](http://elisabethshuker.wordpress.com/2014/05/08/look-wherever-you-want/) on the 8th of May 2014, which itself is a response to [Gary Turk's spoken word video 'Look Up'](https://www.youtube.com/watch?v=Z7dLU6fk9QY)

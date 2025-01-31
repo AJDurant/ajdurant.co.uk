@@ -5,6 +5,8 @@ date: 2012-12-18
 tags:
     - css
     - flexbox
+aliases:
+    - /posts/2012-12-18-fun-with-flexbox
 ---
 
 In the course of the past few days I have discovered parts of CSS that I never knew existed, but have often wished did in some form or another. Amongst these is the calc() function which lets you calculate values for properties, such as calc(100% - 3em).

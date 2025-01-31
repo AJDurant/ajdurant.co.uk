@@ -6,6 +6,8 @@ tags:
     - windows
     - powershell
     - deployment
+aliases:
+    - /posts/2020-05-11-wake-on-lan-deployment
 ---
 
 I needed to get Wake-on-LAN (WoL) settings enabled in Windows via a script, to deploy across a fleet of PCs. There a a number of different ways to do this, and a lot of the ones I found involved [WMI](https://devblogs.microsoft.com/scripting/configure-a-network-adapter-to-wake-a-computer-via-powershell/) or [VBS](https://community.spiceworks.com/scripts/show/240-script-to-enable-wake-on-lan-windows) or [registry](https://mickitblog.blogspot.com/2019/01/powershell-one-liner-to-configure-nic.html) [editing](https://community.spiceworks.com/topic/2239276-script-help-to-disable-power-management-on-network-cards). Ideally (for me) there would be a pure PowerShell solution, and initially it seemed there might be: [Enable-NetAdapterPowerManagement](https://docs.microsoft.com/en-us/powershell/module/netadapter/enable-netadapterpowermanagement). However, this cmdlet is able to Enable various advanced features of network cards, it does not modify the basic plug-and-play (PnP) device power management features that are also required. A starting point, but not enough.

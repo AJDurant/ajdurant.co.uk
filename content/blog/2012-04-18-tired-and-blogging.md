@@ -5,6 +5,8 @@ date: 2012-04-18
 tags:
     - blog
     - sleep
+aliases:
+    - /posts/2012-04-18-tired-and-blogging
 ---
 So I got back to York today, and after an evening of actually doing some work, then not a lot decided to have an earlier night. It was going to be the earliest for a few weeks.
 

@@ -7,6 +7,8 @@ tags:
     - cookies
     - ad-block
     - website
+aliases:
+    - /posts/2012-04-19-free-cookies
 ---
 
 Or rather, no cookies until you've finished all your vegetables and opted-in (mostly the opted-in part).

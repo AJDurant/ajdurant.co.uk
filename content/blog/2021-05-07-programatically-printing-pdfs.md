@@ -5,6 +5,8 @@ date: 2021-05-07
 tags:
     - pdf
     - scripting
+aliases:
+    - /posts/2021-05-07-programatically-printing-pdfs
 ---
 
 I recently needed to dump a bunch of web pages to PDFs. There are [several](https://wkhtmltopdf.org/) [different](https://github.com/puppeteer/puppeteer) [possibilities](https://github.com/spatie/browsershot) for doing this, however many of them don't print items rendered by js after the page load. There are potential workarounds to introduce delay before printing, but they didn't output quite right.

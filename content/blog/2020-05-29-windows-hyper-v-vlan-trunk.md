@@ -7,6 +7,8 @@ tags:
     - powershell
     - virtual machine
     - hyper-v
+aliases:
+    - /posts/2020-05-29-windows-hyper-v-vlan-trunk
 ---
 
 I've been struggling for a while to get a working network in my virtual lab. My basic setup is:
