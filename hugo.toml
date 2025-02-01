@@ -8,8 +8,6 @@ copyright = "© AJ Durant"
 # https://github.com/gohugoio/hugo/issues/12152
 capitalizeListTitles = false
 
-canonifyurls = true
-
 summaryLength = 30
 enableEmoji = true
 pygmentsCodeFences = true
